@@ -1,0 +1,133 @@
+body{
+   margin: 0;
+   width: auto;
+   height: auto;
+   overflow: hidden;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.board{
+    display: flex;
+    user-select: none;
+    flex-direction: column;
+    align-items: first baseline;
+}
+
+.board .row{
+    background-color: aliceblue;
+    display: flex;
+}
+
+.board .row .square{
+    width: 150px;
+    height: 150px;
+    margin: 6px;
+    border-radius: 6px;
+    background-color: #80ffd4;
+    /* border: 1px solid beige; */
+    font-family: sans-serif;
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.board .row .square:hover{
+    cursor: pointer;
+}
+
+
+.score-board{
+    display: flex;
+    width: 600px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.score-card{
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.score-card .name{
+    font-size: 25px;
+}
+.score-card .symbol{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.score-card .score{
+    background-color: aquamarine;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+.reset-button-container{
+    margin-top: 50px;
+}
+.reset-button{
+    padding: 10px 20px;
+    background-color: tomato;
+    border: 0;
+    border-radius: 6px;
+}
+.reset-button:hover{
+
+    cursor: pointer;
+}
+
+.winner-box{
+    position: absolute;
+    width: 600px;
+    height:400px;
+    background-color: tomato;
+    transition: bottom 2s;
+}
+
+.winner-box .animation{
+    bottom: 0;
+}
+
+
+.info-board{
+    width: 600px;
+    height: 300px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+    bottom: -100%;
+    top: 200%;
+    transition: top 1s ease;
+}
+.info-board .info{
+    font-size: 30px;
+}
+
+.info-board.active{
+    top: 200%;
+    transition: top 1s ease;
+}
